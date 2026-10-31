@@ -1,0 +1,31 @@
+public class Test_Line_Point {
+    public static void main(String[] args) {
+        System.out.println("=== Chạy chương trình kiểm thử: TestMyLine ===");
+        
+        
+        MyPoint startPoint = new MyPoint(1, 2);
+        MyPoint endPoint = new MyPoint(4, 6);
+
+        
+        MyLine firstLine = new MyLine(startPoint, endPoint);
+        System.out.println("[TestMyLine] Thông tin đường thẳng 1: " + firstLine); 
+
+        
+        System.out.printf("[TestMyLine] Chiều dài đường thẳng 1: %.2f%n", firstLine.getLength());
+        System.out.printf("[TestMyLine] Hệ số góc (Radian): %.4f%n", firstLine.getGradient());
+
+        System.out.println("--------------------------------------------");
+
+  
+        MyLine secondLine = new MyLine(0, 0, 3, 4);
+        System.out.println("[TestMyLine] Thông tin đường thẳng 2: " + secondLine);
+        System.out.printf("[TestMyLine] Chiều dài đường thẳng 2: %.1f%n", secondLine.getLength());
+        
+      
+        secondLine.setEndXY(6, 8);
+        System.out.println("[TestMyLine] Đường thẳng 2 sau khi đổi điểm cuối: " + secondLine);
+        System.out.printf("[TestMyLine] Chiều dài mới của đường thẳng 2: %.1f%n", secondLine.getLength());
+        
+        System.out.println("=== Kết thúc chương trình TestMyLine ===");
+    }
+}
